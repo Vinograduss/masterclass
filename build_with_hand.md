@@ -15,8 +15,9 @@ int main()
 ```bash
 g++  main.cpp
 ```
-4) смотрим список файлов в директории - ls
-`main.cpp a.out`
+4) проверяем список файлов в директории - `ls`
+   
+   `main.cpp a.out`
 
 5) запускаем бинарник
   `./a.out`
@@ -59,12 +60,13 @@ int fib(int n);
 int fib_opt(int n);
  ```
 
- 8) включаем этот файл в main.cpp и добавляем использование функций
+ 8) подключаем его в main.cpp и добавляем вызов функций
  ```c++
  #include "fib.h"
 
 .... 
- 	std::cout << fib(5) << std::endl;
+        
+	std::cout << fib(5) << std::endl;
 	std::cout << fib_opt(5) << std::endl;
  ```
  9) компилируем 
