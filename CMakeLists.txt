@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.16)
+cmake_minimum_required(VERSION 3.10)
 
 project(test)
 
@@ -13,8 +13,9 @@ target_link_libraries(main fib)
 
 enable_testing()
 find_package(GTest REQUIRED)
+find_package(Threads)
 
 include_directories(${GTEST_INCLUDE_DIRS})
 add_executable(fib_test fib_test.cpp)
-target_link_libraries(fib_test ${GTEST_LIBRARIES} fib)
+target_link_libraries(fib_test ${GTEST_LIBRARIES} pthread fib)
 
