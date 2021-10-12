@@ -5,10 +5,10 @@ project(test)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-set(LIB_SOURCE_FILES fib.cpp)
+set(LIB_SOURCE_FILES fib.c)
 add_library(fib STATIC ${LIB_SOURCE_FILES})
 
-add_executable(main main.cpp)
+add_executable(main main.c)
 target_link_libraries(main fib)
 
 enable_testing()
